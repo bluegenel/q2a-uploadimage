@@ -4,7 +4,7 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 //check if file was selected
-echo "<img src='../logopng.png' alt='logo' style='width:490px;height:50px;'>";
+//echo "<img src='../logopng.png' alt='logo' style='width:490px;height:50px;'>";
 if ($_FILES["fileToUpload"]["error"] == UPLOAD_ERR_NO_FILE) {
         echo "<p style='font:Arial; font-size:20px;'>No file was selected.</p>";
 		    echo "<p style='font:Arial; font-size:20px;'>Sorry, your file was not uploaded.</p>";

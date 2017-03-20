@@ -40,6 +40,9 @@ class q2a_uploadimage {
         return true;
     }
     function output_widget() {
+$fromhandle = qa_get_logged_in_handle();
+$fromhandlehandles = array('user1', 'user2');
+if ( qa_get_logged_in_level() >= QA_USER_LEVEL_EXPERT || in_array($fromhandle, $fromhandlehandles) ) {
 echo "<form action='/qa-uploads/upload.php' target='_blank' method='post' enctype='multipart/form-data'>";
 echo "Select image to upload:";
 echo "<input type='file' name='fileToUpload' id='fileToUpload'>";
@@ -66,4 +69,5 @@ if (is_dir($dir)) {
 		echo "<br><br><hr><br>";
 		}
 }
+    }
 }
